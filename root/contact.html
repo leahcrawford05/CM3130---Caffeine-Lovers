@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--
+  Lost & Ground website: contact page
+  Code written with help from Claude (Anthropic).
+  Shared parts on every page: announcement bar, header, footer and basket.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Lost & Ground</title>
+  <meta name="description" content="Get in touch with Lost & Ground. Questions, collaborations or just a hello.">
+  <meta name="theme-color" content="#8E3B26">
+  <meta property="og:title" content="Contact | Lost & Ground">
+  <meta property="og:description" content="Get in touch with Lost & Ground. Questions, collaborations or just a hello.">
+  <meta property="og:image" content="assets/img/duo-jars-arch.jpg">
+  <link rel="icon" type="image/svg+xml" href="assets/logo/symbol.svg">
+  <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/bultik.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <!-- =============== SKIP LINK (for keyboard and screen reader users) =============== -->
+  <a class="visually-hidden" href="#main">Skip to content</a>
+  <!-- =============== ANNOUNCEMENT BAR (thin strip at the very top) =============== -->
+  <div class="announce">Beauty shouldn’t cost the earth<span class="announce__extra"> &nbsp;✺&nbsp; Launching soon</span></div>
+  <!-- =============== HEADER: logo, menu links, social icons and basket =============== -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="nav__logo" href="index.html"><img src="assets/logo/logo-horizontal.svg" alt="Lost &amp; Ground" width="667" height="340"></a>
+      <!-- Menu links (on phones this becomes the drop-down menu) -->
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        <li class="nav__social">
+          <a class="icon-btn social-btn" href="https://www.instagram.com/lostandground" aria-label="Lost &amp; Ground on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a class="icon-btn social-btn" href="https://www.facebook.com/lostandground" aria-label="Lost &amp; Ground on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4V10.5H7.8v3h2.6V21h3.1Z"/></svg></a>
+          <a class="icon-btn social-btn" href="https://g.page/lostandground" aria-label="Lost &amp; Ground on Google"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81Z"/></svg></a>
+        </li>
+      </ul>
+      <!-- Icons on the right: Instagram, Facebook, Google, basket and menu button -->
+      <div class="nav__actions">
+        <a class="icon-btn social-btn" href="https://www.instagram.com/lostandground" aria-label="Lost &amp; Ground on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a class="icon-btn social-btn" href="https://www.facebook.com/lostandground" aria-label="Lost &amp; Ground on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4V10.5H7.8v3h2.6V21h3.1Z"/></svg></a>
+        <a class="icon-btn social-btn" href="https://g.page/lostandground" aria-label="Lost &amp; Ground on Google"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81Z"/></svg></a>
+        <button class="icon-btn cart-btn" type="button" aria-label="Open basket"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg><span class="cart-count" data-count="0">0</span></button>
+        <button class="icon-btn menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- =============== CONTACT PAGE: MAIN CONTENT =============== -->
+  <main id="main">
+
+    <!-- ===== 1. PAGE HEADER: title of the page ===== -->
+    <section class="section page-hero bg-peach wave wave--double">
+      <div class="container reveal">
+        <span class="eyebrow">Say hello</span>
+        <h1>Get in <span class="accent">touch</span></h1>
+        <p class="lead">Questions, collaborations or just want to chat about coffee? We’d love to hear from you.</p>
+      </div>
+    </section>
+
+
+    <!-- ===== 2. CONTACT: contact details and message form ===== -->
+    <section class="section bg-cream wave wave--ripple">
+      <div class="container grid-2" style="align-items:start">
+        <div class="reveal">
+          <span class="eyebrow">Drop us a line</span>
+          <h2>Let’s <span class="accent">talk</span></h2>
+          <p>Got a question about our scrubs, your order or working together? Send us a message and we’ll reply within two working days.</p>
+          <ul class="contact-list">
+            <li><span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.7-4.6A8.5 8.5 0 1 1 8 19.6L3 21Z"/></svg></span><div><strong>WhatsApp</strong><a href="https://wa.me/447700900123">+44 7700 900123</a></div></li>
+            <li><span class="card__icon card__icon--mustard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 7 9 6 9-6"/></svg></span><div><strong>Email</strong><a href="mailto:hello@lostandground.co.uk">hello@lostandground.co.uk</a></div></li>
+            <li><span class="card__icon card__icon--olive"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span><div><strong>Instagram</strong><a href="https://www.instagram.com/lostandground">@lostandground</a></div></li>
+            <li><span class="card__icon card__icon--rust"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><strong>Based in</strong><span>Aberdeen, Scotland</span></div></li>
+          </ul>
+        </div>
+        <div class="panel reveal">
+          <form data-form="contact">
+            <div class="field"><label for="name">Name</label><input class="input" id="name" name="name" type="text" autocomplete="name" required></div>
+            <div class="field"><label for="email">Email</label><input class="input" id="email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field"><label for="topic">Topic</label>
+              <select class="input" id="topic" name="topic">
+                <option>General question</option>
+                <option>My order</option>
+                <option>Collaboration</option>
+                <option>Wholesale</option>
+              </select>
+            </div>
+            <div class="field"><label for="message">Message</label><textarea class="input" id="message" name="message" required></textarea></div>
+            <button class="btn" type="submit">Send message</button>
+            <p class="form-note" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===== 3. FAQ: frequently asked questions ===== -->
+    <section class="section bg-stripes-green on-dark" id="faq">
+      <div class="container">
+        <div class="section-head text-center reveal">
+          <span class="eyebrow">Good to know</span>
+          <h2>Frequently <span class="accent">asked</span></h2>
+        </div>
+        <div class="faq">
+          <details class="reveal"><summary>When are you launching?</summary><p>We’re aiming for early 2027. Sign up to our newsletter and you’ll be the first to know.</p></details>
+          <details class="reveal"><summary>Is the scrub safe for sensitive skin?</summary><p>Our scrub is made with natural ingredients, but everyone’s skin is different. Try a little on your arm first. Please don’t use it on your face, on broken skin or after too much sun.</p></details>
+          <details class="reveal"><summary>How is my order packed?</summary><p>In cardboard, with no plastic fillers. Everything is recyclable or reusable.</p></details>
+          <details class="reveal"><summary>Do you ship internationally?</summary><p>For now we ship across the UK. We hope to ship to Europe soon. Sign up to our newsletter to hear about it first.</p></details>
+          <details class="reveal"><summary>Where does your coffee come from?</summary><p>From our partner ReviveEco. They collect used coffee from cafés in Glasgow and Edinburgh and from one of the UK’s biggest coffee chains, so every batch is consistent.</p></details>
+          <details class="reveal"><summary>What can I do with the empty jar?</summary><p>Reuse it! It’s perfect for spices, cotton pads, plants or your next refill.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =============== FOOTER: logo, links, newsletter and copyright =============== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/logo/logo-horizontal-reversed.svg" alt="Lost &amp; Ground" width="667" height="340">
+          <p>Natural coffee body scrub with no microplastics. A corner for the rebels at heart.</p>
+          <div class="socials">
+            <a href="https://www.instagram.com/lostandground" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://www.tiktok.com/@lostandground" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.5 3 2.5 5 5.5 5.3"/></svg></a>
+            <a href="https://wa.me/447700900123" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.7-4.6A8.5 8.5 0 1 1 8 19.6L3 21Z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h2 class="footer-title">Explore</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-title">Help</h2>
+          <ul>
+            <li><a href="contact.html#faq">FAQ</a></li>
+            <li><a href="contact.html#faq">Shipping</a></li>
+            <li><a href="contact.html#faq">Returns</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-title">Join the rebels</h2>
+          <p>Launch news, skincare tips and easy ways to waste less. No spam, ever.</p>
+          <form class="inline-form" data-form="newsletter">
+            <label class="visually-hidden" for="footer-email">Email address</label>
+            <input id="footer-email" type="email" name="email" placeholder="Your email" required>
+            <button class="btn btn--mustard" type="submit">Sign up</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-stripe" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Lost &amp; Ground. All rights reserved.</span>
+        <span>Beauty shouldn’t cost the earth.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =============== BASKET: dark overlay and side panel (opened by the basket icon) =============== -->
+  <div class="cart-overlay"></div>
+  <aside class="cart-drawer" aria-label="Basket" aria-hidden="true">
+    <div class="cart-drawer__head">
+      <h2>Your basket</h2>
+      <button class="cart-close" type="button" aria-label="Close basket">×</button>
+    </div>
+    <ul class="cart-items"></ul>
+    <div class="cart-drawer__foot">
+      <div class="cart-total"><span>Total</span><span>£0.00</span></div>
+      <button class="btn checkout-btn" type="button" disabled>Checkout</button>
+    </div>
+  </aside>
+  <!-- Small pop-up message, e.g. "added to your basket" -->
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Site scripts (menu, basket, filters, forms) -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>

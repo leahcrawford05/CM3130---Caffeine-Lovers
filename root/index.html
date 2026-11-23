@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<!--
+  Lost & Ground website: home page
+  Code written with help from Claude (Anthropic).
+  Shared parts on every page: announcement bar, header, footer and basket.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lost & Ground | Natural coffee body scrub</title>
+  <meta name="description" content="Lost & Ground: natural coffee body scrub with no microplastics. Beauty shouldn’t cost the earth.">
+  <meta name="theme-color" content="#8E3B26">
+  <meta property="og:title" content="Lost & Ground | Natural coffee body scrub">
+  <meta property="og:description" content="Lost & Ground: natural coffee body scrub with no microplastics. Beauty shouldn’t cost the earth.">
+  <meta property="og:image" content="assets/img/duo-jars-arch.jpg">
+  <link rel="icon" type="image/svg+xml" href="assets/logo/symbol.svg">
+  <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/bultik.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <!-- =============== SKIP LINK (for keyboard and screen reader users) =============== -->
+  <a class="visually-hidden" href="#main">Skip to content</a>
+  <!-- =============== ANNOUNCEMENT BAR (thin strip at the very top) =============== -->
+  <div class="announce">Beauty shouldn’t cost the earth<span class="announce__extra"> &nbsp;✺&nbsp; Launching soon</span></div>
+  <!-- =============== HEADER: logo, menu links, social icons and basket =============== -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="nav__logo" href="index.html"><img src="assets/logo/logo-horizontal.svg" alt="Lost &amp; Ground" width="667" height="340"></a>
+      <!-- Menu links (on phones this becomes the drop-down menu) -->
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="nav__social">
+          <a class="icon-btn social-btn" href="https://www.instagram.com/lostandground" aria-label="Lost &amp; Ground on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a class="icon-btn social-btn" href="https://www.facebook.com/lostandground" aria-label="Lost &amp; Ground on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4V10.5H7.8v3h2.6V21h3.1Z"/></svg></a>
+          <a class="icon-btn social-btn" href="https://g.page/lostandground" aria-label="Lost &amp; Ground on Google"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81Z"/></svg></a>
+        </li>
+      </ul>
+      <!-- Icons on the right: Instagram, Facebook, Google, basket and menu button -->
+      <div class="nav__actions">
+        <a class="icon-btn social-btn" href="https://www.instagram.com/lostandground" aria-label="Lost &amp; Ground on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a class="icon-btn social-btn" href="https://www.facebook.com/lostandground" aria-label="Lost &amp; Ground on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4V10.5H7.8v3h2.6V21h3.1Z"/></svg></a>
+        <a class="icon-btn social-btn" href="https://g.page/lostandground" aria-label="Lost &amp; Ground on Google"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81Z"/></svg></a>
+        <button class="icon-btn cart-btn" type="button" aria-label="Open basket"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg><span class="cart-count" data-count="0">0</span></button>
+        <button class="icon-btn menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- =============== HOME PAGE: MAIN CONTENT =============== -->
+  <main id="main">
+
+    <!-- ===== 1. HERO: big headline with two swaying jars (for him / for her) ===== -->
+    <section class="section hero--jar wave wave--double">
+      <div class="container hero__content text-center">
+        <span class="eyebrow reveal">Natural · Ethical · Rebellious</span>
+        <div class="hero__stage">
+          <h1 class="hero__title">
+            <span>Beauty</span>
+            <span>Shouldn’t</span>
+            <span>Cost the Earth</span>
+          </h1>
+          <div class="hero__jar">
+            <img class="hero__jar-him" src="assets/img/jar-hero-him.webp" alt="Lost &amp; Ground coffee body scrub for him" width="520" height="492" fetchpriority="high">
+            <img class="hero__jar-her" src="assets/img/jar-hero-her.webp" alt="Lost &amp; Ground coffee body scrub for her" width="500" height="520" fetchpriority="high">
+          </div>
+        </div>
+        <div class="reveal">
+          <p class="lead">Simple, effective skincare made with natural ingredients and zero microplastics. Kind to your skin, kinder to the planet.</p>
+          <div class="btn-row">
+            <a class="btn" href="shop.html">Explore the shop</a>
+            <a class="btn btn--ghost" href="about.html">Our story</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===== 2. TICKER: moving strip with short brand promises ===== -->
+    <div class="ticker wave wave--ripple" aria-hidden="true">
+      <div class="ticker__track"><span>No microplastics</span><img src="assets/deco/sparkle.svg" alt=""><span>Upcycled coffee grounds</span><img src="assets/deco/sparkle.svg" alt=""><span>Plastic free jars</span><img src="assets/deco/sparkle.svg" alt=""><span>Kind to skin</span><img src="assets/deco/sparkle.svg" alt=""><span>Kind to the sea</span><img src="assets/deco/sparkle.svg" alt=""><span>Made for rebels</span><img src="assets/deco/sparkle.svg" alt=""><span>No microplastics</span><img src="assets/deco/sparkle.svg" alt=""><span>Upcycled coffee grounds</span><img src="assets/deco/sparkle.svg" alt=""><span>Plastic free jars</span><img src="assets/deco/sparkle.svg" alt=""><span>Kind to skin</span><img src="assets/deco/sparkle.svg" alt=""><span>Kind to the sea</span><img src="assets/deco/sparkle.svg" alt=""><span>Made for rebels</span><img src="assets/deco/sparkle.svg" alt=""></div>
+    </div>
+
+
+    <!-- ===== 3. WELCOME: short intro to the brand ===== -->
+    <section class="section bg-peach wave wave--ripple">
+      <div class="container narrow text-center reveal">
+        <span class="eyebrow">Hey, welcome</span>
+        <h2>Welcome to the <span class="accent">rebels’ corner</span></h2>
+        <div class="panel">
+          <p class="lead" style="margin-inline:auto">Lost &amp; Ground started at a little crêpe hut on Aberdeen beach. Every day we watched bags of used coffee go in the bin. So we turned that waste into something good: a natural body scrub that leaves your skin soft and keeps plastic out of the sea.</p>
+          <a class="btn btn--mustard" href="about.html">Let’s go</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===== 4. FOR HIM / FOR HER: two tiles that open the shop with a filter ===== -->
+    <section class="section bg-cream wave">
+      <div class="container">
+        <div class="section-head text-center reveal">
+          <span class="eyebrow">Shop by</span>
+          <h2>For him &amp; <span class="accent">for her</span></h2>
+        </div>
+        <div class="tiles-2">
+          <a class="tile tile--him reveal" href="shop.html#him"><img src="assets/img/man-portrait.jpg" alt="" loading="lazy"><span>For him<small>Cedarwood &amp; black pepper</small></span></a>
+          <a class="tile tile--her reveal" href="shop.html#her"><img src="assets/img/woman-portrait.jpg" alt="" loading="lazy"><span>For her<small>Vanilla &amp; orange blossom</small></span></a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===== 5. BENEFITS: why Lost & Ground (green striped section) ===== -->
+    <section class="section bg-stripes-green on-dark wave wave--double">
+      <div class="container">
+        <div class="section-head text-center reveal">
+          <span class="eyebrow">Why Lost &amp; Ground</span>
+          <h2>Good for you, <span class="accent">gentle on the planet</span></h2>
+        </div>
+        <div class="grid-3">
+          <div class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><ellipse cx="12" cy="12" rx="7" ry="9.5" transform="rotate(30 12 12)"/><path d="M8.5 5.5c4 3 0 9 4.5 13"/></svg></div>
+            <h3>Upcycled coffee</h3>
+            <p>We give used coffee grounds a second life. They make a gentle, natural scrub that wakes up your skin.</p>
+          </div>
+          <div class="card reveal">
+            <div class="card__icon card__icon--mustard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2 8c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M2 13c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M2 18c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg></div>
+            <h3>Zero microplastics</h3>
+            <p>No tiny plastic beads. Nothing that goes down the drain and stays in the sea forever.</p>
+          </div>
+          <div class="card reveal">
+            <div class="card__icon card__icon--olive"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 19H4.8a1.8 1.8 0 0 1-1.6-2.7L7.5 9"/><path d="M11 19h8.2a1.8 1.8 0 0 0 1.6-2.7l-1.2-2.1"/><path d="m14 16-3 3 3 3"/><path d="M8.3 13.6 7.5 9 3 10.1"/><path d="m9.3 5.6 1.1-1.9a1.8 1.8 0 0 1 3.1 0l3.4 5.9"/><path d="m13.4 9.9 3.6.6.9-4.4"/></svg></div>
+            <h3>Plastic free packaging</h3>
+            <p>Glass jars, metal lids and cardboard boxes. Everything can be recycled or used again.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===== 6. ABOUT TEASER: short story with photo and link to About ===== -->
+    <section class="section bg-sand wave wave--ripple">
+      <img class="deco deco--rainbow-tr" src="assets/deco/rainbow.svg" alt="">
+      <div class="container grid-2">
+        <div class="arch-wrap reveal" style="--blob: var(--blush)">
+          <div class="arch"><img src="assets/img/couple-arch.jpg" alt="A woman and a man holding Lost &amp; Ground coffee scrub jars" loading="lazy"></div>
+        </div>
+        <div class="reveal">
+          <span class="eyebrow">Get to know us</span>
+          <h2>About <span class="accent">us</span></h2>
+          <p class="lead">We make simple body scrubs from coffee that would otherwise end up in the bin.</p>
+          <p>It all began with Sarah’s crêpe hut by the sea in Aberdeen. Today we work with ReviveEco, who collect used coffee from cafés and big coffee chains around the UK. We turn it into a scrub you’ll actually want to use, in a jar you can keep.</p>
+          <a class="btn" href="about.html">Read more</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===== 7. HOW TO USE: three simple steps ===== -->
+    <section class="section bg-cream wave wave--double">
+      <div class="container grid-2">
+        <div class="reveal">
+          <span class="eyebrow">The ritual</span>
+          <h2>Scrub, rinse, <span class="accent">glow</span></h2>
+          <div class="steps">
+            <div class="step"><div><h3>Scoop</h3><p>Take a little scrub in your hand and spread it on damp skin.</p></div></div>
+            <div class="step"><div><h3>Massage</h3><p>Work in slow circles to buff and wake up the skin.</p></div></div>
+            <div class="step"><div><h3>Rinse</h3><p>Rinse with warm water and enjoy soft, glowing skin.</p></div></div>
+          </div>
+        </div>
+        <div class="arch-wrap order-first-mobile reveal" style="--blob: var(--butter)">
+          <div class="arch"><img src="assets/img/scrub-on-arm.jpg" alt="Coffee scrub being applied to an arm" loading="lazy"></div>
+          <div class="arch arch--second"><img src="assets/img/jar-open-texture.jpg" alt="" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===== 8. BEST SELLERS: one product for him and one for her ===== -->
+    <section class="section bg-sunburst wave wave--ripple">
+      <div class="container">
+        <div class="section-head text-center reveal">
+          <span class="eyebrow">Loved already</span>
+          <h2>Our best sellers</h2>
+        </div>
+        <div class="products products--two">
+          <article class="product reveal" data-gender="him">
+            <div class="product__media">
+              <img src="assets/img/packshot-him.jpg" alt="Coffee Body Scrub For Him in an amber glass jar" loading="lazy" width="1400" height="1400">
+              <span class="product__tag product__tag--him">For Him</span>
+            </div>
+            <div class="product__body">
+              <h3>Coffee Body Scrub</h3>
+              <p>Cedarwood &amp; Black Pepper · 200 ml</p>
+              <div class="product__foot">
+                <span class="price">£18</span>
+                <button class="btn" type="button" data-add="him" data-name="Coffee Body Scrub For Him" data-price="18.00" data-img="assets/img/packshot-him.jpg">Add to basket</button>
+              </div>
+            </div>
+          </article>
+          <article class="product reveal" data-gender="her">
+            <div class="product__media">
+              <img src="assets/img/packshot-her.jpg" alt="Coffee Body Scrub For Her in an amber glass jar" loading="lazy" width="1400" height="1400">
+              <span class="product__tag">For Her</span>
+            </div>
+            <div class="product__body">
+              <h3>Coffee Body Scrub</h3>
+              <p>Vanilla &amp; Orange Blossom · 200 ml</p>
+              <div class="product__foot">
+                <span class="price">£18</span>
+                <button class="btn" type="button" data-add="her" data-name="Coffee Body Scrub For Her" data-price="18.00" data-img="assets/img/packshot-her.jpg">Add to basket</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="text-center" style="margin-top:44px"><a class="btn btn--olive" href="shop.html">View all</a></div>
+      </div>
+    </section>
+
+
+    <!-- ===== 9. NEWSLETTER: email sign up ===== -->
+    <section class="section bg-terra on-dark wave">
+      <div class="container text-center reveal">
+        <span class="eyebrow">Join and</span>
+        <h2>Subscribe</h2>
+        <p class="lead">Be the first to hear about our launch, early bird offers and stories from behind the scenes.</p>
+        <form class="inline-form" data-form="newsletter">
+          <label class="visually-hidden" for="home-email">Email address</label>
+          <input id="home-email" type="email" name="email" placeholder="Your email address" required>
+          <button class="btn btn--mustard" type="submit">Join</button>
+        </form>
+        <p class="form-note" aria-live="polite"></p>
+      </div>
+    </section>
+
+
+    <!-- ===== 10. INSTAGRAM GALLERY: four photos ===== -->
+    <section class="section bg-sand">
+      <div class="container">
+        <div class="section-head text-center reveal">
+          <span class="eyebrow">@lostandground</span>
+          <h2>Follow <span class="accent">along</span></h2>
+        </div>
+        <div class="gallery reveal">
+          <figure><img src="assets/img/man-arch.jpg" alt="Man sitting with the scrub jar" loading="lazy"></figure>
+          <figure><img src="assets/img/duo-jars-arch.jpg" alt="The For Him and For Her jars side by side" loading="lazy"></figure>
+          <figure><img src="assets/img/jar-him-palm-shadow.jpg" alt="For Him jar in the sun" loading="lazy"></figure>
+          <figure><img src="assets/img/jar-her-palm-shadow.jpg" alt="For Her jar in the sun" loading="lazy"></figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =============== FOOTER: logo, links, newsletter and copyright =============== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/logo/logo-horizontal-reversed.svg" alt="Lost &amp; Ground" width="667" height="340">
+          <p>Natural coffee body scrub with no microplastics. A corner for the rebels at heart.</p>
+          <div class="socials">
+            <a href="https://www.instagram.com/lostandground" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://www.tiktok.com/@lostandground" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.5 3 2.5 5 5.5 5.3"/></svg></a>
+            <a href="https://wa.me/447700900123" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.7-4.6A8.5 8.5 0 1 1 8 19.6L3 21Z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h2 class="footer-title">Explore</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-title">Help</h2>
+          <ul>
+            <li><a href="contact.html#faq">FAQ</a></li>
+            <li><a href="contact.html#faq">Shipping</a></li>
+            <li><a href="contact.html#faq">Returns</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-title">Join the rebels</h2>
+          <p>Launch news, skincare tips and easy ways to waste less. No spam, ever.</p>
+          <form class="inline-form" data-form="newsletter">
+            <label class="visually-hidden" for="footer-email">Email address</label>
+            <input id="footer-email" type="email" name="email" placeholder="Your email" required>
+            <button class="btn btn--mustard" type="submit">Sign up</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-stripe" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Lost &amp; Ground. All rights reserved.</span>
+        <span>Beauty shouldn’t cost the earth.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =============== BASKET: dark overlay and side panel (opened by the basket icon) =============== -->
+  <div class="cart-overlay"></div>
+  <aside class="cart-drawer" aria-label="Basket" aria-hidden="true">
+    <div class="cart-drawer__head">
+      <h2>Your basket</h2>
+      <button class="cart-close" type="button" aria-label="Close basket">×</button>
+    </div>
+    <ul class="cart-items"></ul>
+    <div class="cart-drawer__foot">
+      <div class="cart-total"><span>Total</span><span>£0.00</span></div>
+      <button class="btn checkout-btn" type="button" disabled>Checkout</button>
+    </div>
+  </aside>
+  <!-- Small pop-up message, e.g. "added to your basket" -->
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Site scripts (menu, basket, filters, forms) -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>
